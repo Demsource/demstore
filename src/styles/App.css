@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+.App {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.home,
+.add-product {
+  width: 90%;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 2px solid indigo;
+  padding-bottom: 5px;
+  margin: 5vh 0;
+  height: 5vh;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: indigo;
+}
+button {
+  background: indigo;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  outline-color: indigo;
+  text-transform: uppercase;
+}
+
+footer {
+  box-sizing: border-box;
+  border-top: 2px solid indigo;
+  color: indigo;
+  padding-top: 10px;
+  text-align: center;
+  height: 5vh;
+  margin-top: 5vh;
+}
+
+.content {
+  display: flex;
+  height: 75vh;
+}
+
+/* Styling Products Page */
+#add-btn:hover,
+#save-btn:hover {
+  background: blue;
+}
+#delete-product-btn:hover,
+#cancel-btn:hover {
+  background: red;
+}
+.products {
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid indigo;
+  margin-bottom: 1.2vw;
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+  height: 20vw;
+  width: 24.25%;
+}
+
+.product:nth-child(4n-2) {
+  margin-left: 1%;
+  margin-right: 0.5%;
+}
+.product:nth-child(4n-1) {
+  margin-left: 0.5%;
+  margin-right: 1%;
+}
+.product ul li:not(:last-child) {
+  margin-bottom: 0.5vw;
+}
+
+input.delete-checkbox {
+  position: absolute;
+  height: 2vw;
+  width: 2vw;
+  top: 5%;
+  left: 5%;
+}
+
+input.delete-checkbox {
+  outline-color: indigo;
+}
+/* END OF Styling Products Page */
+
+/* Styling Add Page */
+.add-form {
+  justify-content: center;
+  color: indigo;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.add-form::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+.add-form form {
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.add-form form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.add-form form label[for="productType"] {
+  margin: 3rem 0 2rem 0;
+}
+.add-form form label span {
+  font-weight: bold;
+  text-align: center;
+  margin-right: 3vw;
+  width: 30%;
+}
+.add-form form label input,
+.add-form form label select {
+  width: 70%;
+}
+@media screen and (min-width: 768px) {
+  .add-form form label input,
+  .add-form form label select {
+    height: 3vw;
+  }
+}
+.add-form form .note {
+  text-align: center;
+}
+
+.add-form form .note,
+.add-form form p.desctiption {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.add-form form .note {
+  color: red;
+  margin-bottom: 1rem;
+}
+.add-form form p.desctiption {
+  margin-top: 2rem;
+}
+.add-form form p.desctiption span,
+.add-form form .note span {
+  width: 30%;
+  margin-right: 3vw;
+}
+.add-form form p.desctiption strong,
+.add-form form .note strong {
+  width: 70%;
+}
+.add-form form p.desctiption strong small {
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+/* END OF Styling Add Page */
